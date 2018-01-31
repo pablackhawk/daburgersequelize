@@ -1,0 +1,88 @@
+html {
+  background-color: #ffc04c;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: rgb(228, 226, 226);
+}
+
+#stock_burger {
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: 'Sedgwick Ave', cursive;
+  margin: 50px;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.burgerAvailable {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 25px;
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  background-color: #3657eb;
+}
+
+.burgerAvailable:hover {
+  background-color: #3044b4;
+}
+
+.burgerEaten {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 25px;
+  width: 100%;
+  margin: 13px;
+  padding: 10px;
+  background-color: #ff684e;
+}
+
+.formContainer {
+  background-color: orange;
+}
+
+.addBurgerButton {
+  font-family: 'Sedgewick Ave', cursive;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 25px;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: #ffc04c;
+  border: none;
+}
+
+.burgerFooter {
+  background-color: #ffc04c;
+  color: rgb(53, 53, 53);
+  padding: 20px 0;
+}
+
+#right-column {
+  margin-bottom: 55px;
+}
