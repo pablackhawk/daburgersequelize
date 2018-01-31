@@ -13,7 +13,7 @@ Users can enter burgers on the menu, making them available for consumption. Addi
 To run the application locally, first clone this repository witht the following command:
 
 ```node
-git clone https://github.com/pablackhawk/daburger.git
+git clone https://github.com/pablackhawk/daburgersequelize.git
 ```
 
 After navigating to the repository folder application dependencies should be installed using
