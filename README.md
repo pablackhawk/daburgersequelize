@@ -1,10 +1,10 @@
 # daburger
 
-The burger eating application!
+The burger eating application! ow with Sequelize!
 
 ## Description
 
-This is a simple full-stack application with front-end HTML and CSS using the Materialze framework, templating from Handlebars.js, a back-end implementation using Node.js, Express, and database support using MySQL.
+This is a simple full-stack application with front-end HTML and CSS using the Materialze framework, templating from Handlebars.js, a back-end implementation using Node.js, Express, and database support using MySQL and Sequelize.
 
 Users can enter burgers on the menu, making them available for consumption. Adding a burger to the menu also updates the database with the new burger. Available burger entries are shown on the left side of the screen and colored blue. Clicking on a burger consumes it, moving it to the right side of the screen and turning the burger red. The databse is then updated with its new status.
 
@@ -16,7 +16,7 @@ To run the application locally, first clone this repository witht the following 
 git clone https://github.com/pablackhawk/daburger.git
 ```
 
-After navigating to the repository folder application dependencies should be instaled using
+After navigating to the repository folder application dependencies should be installed using
 
 ```node
 npm install
@@ -45,5 +45,7 @@ Finally, using a web browser open the local application on port 8000 aat the URL
 * Handlebars.js
 
 * MySQL
+
+* Sequelize
 
 **Copyright &copy; 2018 Laurentius Tirtaraharja**

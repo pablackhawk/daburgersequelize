@@ -3,34 +3,27 @@ let express = require('express')
 let router = express.Router()
 
 // Database import
-let burger = require('../models/burger.js')
+let db = require('../models')
 
 // Routes
 router.get('/', function(req, res) {
-  burger.selectAll(function(data) {
-    let hbsObject = {
-      burgers: data,
-    }
-    res.render('index', hbsObject)
+  db.Burger.findAll({}).then(function(dbBurger) {
+    res.json(dbBurger)
   })
 })
 
 router.post('/burgers', function(req, res) {
-  burger.insertOne(['burger_name'], [req.body.burger_name], function(data) {
-    res.redirect('/')
+  db.Burger.create({
+    burger_name: req.body.name,
+  }).then(function(dbBurger) {
+    res.json(dbBurger)
   })
 })
 
 router.put('/burgers/:id', function(req, res) {
-  let condition = 'id = ' + req.params.id
-
-  burger.updateOne(
-    {
-      devoured: true,
-    },
-    condition,
-    function(data) {
-      res.redirect('/')
+  db.Burger.update({ devoured: true }, { where: { id: req.params.id } }).then(
+    function(dbBurger) {
+      res.json(dbBurger)
     }
   )
 })
