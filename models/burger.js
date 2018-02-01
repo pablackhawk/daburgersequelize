@@ -4,11 +4,11 @@ let Sequelize = require('sequelize')
 module.exports = function(sequelize, DataTypes) {
   let Burger = sequelize.define('Burger', {
     burger_name: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false,
     },
     devoured: {
-      type: DataTypes.BOOOLEAN,
+      type: Sequelize.BOOLEAN,
       allowNull: false,
       defaultValue: false,
     },

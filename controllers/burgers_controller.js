@@ -8,7 +8,8 @@ let db = require('../models')
 // Routes
 router.get('/', function(req, res) {
   db.Burger.findAll({}).then(function(dbBurger) {
-    res.json(dbBurger)
+    console.log({ Burgers: dbBurger[0] })
+    res.json({ Burgers: dbBurger })
   })
 })
 
