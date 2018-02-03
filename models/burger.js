@@ -1,17 +1,23 @@
 // Sequelize setup
-let Sequelize = require('sequelize')
+let Sequelize = require('sequelize');
 
 module.exports = function(sequelize, DataTypes) {
-  let Burger = sequelize.define('Burger', {
-    burger_name: {
-      type: Sequelize.STRING,
-      allowNull: false,
+  let Burger = sequelize.define(
+    'Burger',
+    {
+      burger_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      devoured: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+      },
     },
-    devoured: {
-      type: Sequelize.BOOLEAN,
-      allowNull: false,
-      defaultValue: false,
-    },
-  })
-  return Burger
-}
+    {
+      timestamps: false,
+    }
+  );
+  return Burger;
+};

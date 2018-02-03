@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col s12 m6">
         <h2>Ready to Eat!</h2>
-        {{Burgers[0].id}} {{#each Burgers}} {{#unless this.devoured}}
+        {{Burger}} {{#each Burger}} {{#unless this.devoured}}
         <div>
           <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
             <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
@@ -16,7 +16,7 @@
 
       <div class="col s12 m6">
         <h2 id='right-column'>Eaten Burgers!</h2>
-        {{#each Burgers}} {{#if this.devoured}}
+        {{#each Burger}} {{#if this.devoured}}
         <div class='burgerEaten'>
           <div>
             {{this.burger_name}}
