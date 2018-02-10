@@ -9,7 +9,7 @@ let db = require('../models');
 router.get('/', function(req, res) {
   db.Burger.findAll({}).then(function(dbBurger) {
     console.log({ Burgers: dbBurger[0] });
-    res.json(dbBurger);
+    return res.render('index', { dbBurger });
   });
 });
 
@@ -17,14 +17,14 @@ router.post('/burgers', function(req, res) {
   db.Burger.create({
     burger_name: req.body.name,
   }).then(function(dbBurger) {
-    res.json(dbBurger);
+    res.redirect('/');
   });
 });
 
 router.put('/burgers/:id', function(req, res) {
   db.Burger.update({ devoured: true }, { where: { id: req.params.id } }).then(
     function(dbBurger) {
-      res.json(dbBurger);
+      res.redirect('/');
     }
   );
 });
