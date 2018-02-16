@@ -1,29 +1,29 @@
 // Dependencies
-let express = require('express');
-let router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 // Database import
-let db = require('../models');
+const db = require('../models');
 
 // Routes
-router.get('/', function(req, res) {
-  db.Burger.findAll({}).then(function(dbBurger) {
+router.get('/', (req, res) => {
+  db.Burger.findAll({}).then(dbBurger => {
     console.log({ Burgers: dbBurger[0] });
     return res.render('index', { dbBurger });
   });
 });
 
-router.post('/burgers', function(req, res) {
+router.post('/burgers', (req, res) => {
   db.Burger.create({
     burger_name: req.body.name,
-  }).then(function(dbBurger) {
+  }).then(dbBurger => {
     res.redirect('/');
   });
 });
 
-router.put('/burgers/:id', function(req, res) {
+router.put('/burgers/:id', (req, res) => {
   db.Burger.update({ devoured: true }, { where: { id: req.params.id } }).then(
-    function(dbBurger) {
+    dbBurger => {
       res.redirect('/');
     }
   );

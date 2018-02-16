@@ -1,7 +1,7 @@
 // Sequelize setup
 let Sequelize = require('sequelize');
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
   let Burger = sequelize.define(
     'Burger',
     {
